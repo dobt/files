@@ -1,0 +1,48 @@
+{
+  "bookSourceUrl": "https://novel4j.com",
+  "bookSourceType": "0",
+  "bookSourceName": "novel4j",
+  "bookSourceGroup": "novel4j",
+  "bookSourceComment": "",
+  "loginUrl": "",
+  "loginUi": "",
+  "loginCheckJs": "",
+  "concurrentRate": "",
+  "header": "",
+  "bookUrlPattern": "",
+  "searchUrl": "/api/search?keyword={{key}}&page={{page}}",
+  "exploreUrl": "",
+  "enabled": true,
+  "enabledExplore": false,
+  "weight": 0,
+  "customOrder": 1,
+  "lastUpdateTime": 1641127328432,
+  "ruleSearch": {
+    "bookList": "data.books",
+    "name": "name",
+    "author": "author",
+    "kind": "Category.name",
+    "lastChapter": "Chapters[0].name",
+    "intro": "intro",
+    "coverUrl": "thumb",
+    "bookUrl": "/api/book/{{$.id}}"
+  },
+  "ruleExplore": {},
+  "ruleBookInfo": {
+    "init": "data.book",
+    "name": "name",
+    "author": "author",
+    "kind": "Category.name",
+    "lastChapter": "Chapters[0].name",
+    "intro": "intro",
+    "coverUrl": "thumb"
+  },
+  "ruleToc": {
+    "chapterList": "data.chapters",
+    "chapterName": "name",
+    "chapterUrl": "/api/read/{{$.book_id}}/{{$.id}}"
+  },
+  "ruleContent": {
+    "content": "data.chapter.content"
+  }
+}
