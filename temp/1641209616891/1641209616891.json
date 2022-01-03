@@ -1,0 +1,48 @@
+{
+  "bookSourceUrl": "https://novel4j.com",
+  "bookSourceType": "0",
+  "bookSourceName": "novel4j",
+  "bookSourceGroup": "novel4j",
+  "bookSourceComment": "",
+  "loginUrl": "",
+  "loginUi": "",
+  "loginCheckJs": "",
+  "concurrentRate": "",
+  "header": "",
+  "bookUrlPattern": "",
+  "searchUrl": "/api/search?keyword={{key}}&page={{page}}",
+  "exploreUrl": "",
+  "enabled": true,
+  "enabledExplore": false,
+  "weight": 0,
+  "customOrder": 1,
+  "lastUpdateTime": 1641127328432,
+  "ruleSearch": {
+    "bookList": "@json:data.books",
+    "name": "@json:name",
+    "author": "@json:author",
+    "kind": "@json:Category.name",
+    "lastChapter": "@json:Chapters[0].name",
+    "intro": "@json:intro",
+    "coverUrl": "@json:thumb",
+    "bookUrl": "/api/book/{{$.id}}"
+  },
+  "ruleExplore": {},
+  "ruleBookInfo": {
+    "init": "@json:data.book",
+    "name": "@json:name",
+    "author": "@json:author",
+    "kind": "@json:Category.name",
+    "lastChapter": "@json:Chapters[0].name",
+    "intro": "@json:intro",
+    "coverUrl": "@json:thumb"
+  },
+  "ruleToc": {
+    "chapterList": "@json:data.chapters",
+    "chapterName": "@json:name",
+    "chapterUrl": "/api/read/{{$.book_id}}/{{$.id}}"
+  },
+  "ruleContent": {
+    "content": "@json:data.chapter.content"
+  }
+}
