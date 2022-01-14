@@ -1,0 +1,57 @@
+{
+  "bookSourceUrl": "https://novel4j.com",
+  "bookSourceType": "0",
+  "bookSourceName": "novel4j",
+  "bookSourceGroup": "novel4j",
+  "bookSourceComment": "",
+  "loginUrl": "",
+  "loginUi": "",
+  "loginCheckJs": "",
+  "concurrentRate": "",
+  "header": "",
+  "bookUrlPattern": "",
+  "searchUrl": "/api/search?keyword={{key}}&page={{page}}",
+  "exploreUrl": "[{\"title\": \"玄幻/奇幻\",\"url\":\"api/category/1/{{page}}/48\"},\n{\"title\": \"武侠/修真\",\"url\":\"api/category/2/{{page}}/48\"},\n{\"title\": \"都市/言情\",\"url\":\"api/category/3/{{page}}/48\"},\n{\"title\": \"军事/历史\",\"url\":\"api/category/4/{{page}}/48\"},\n{\"title\": \"网游/竞技\",\"url\":\"api/category/5/{{page}}/48\"},\n{\"title\": \"科幻/灵异\",\"url\":\"api/category/6/{{page}}/48\"},\n{\"title\": \"异世/穿越\",\"url\":\"api/category/7/{{page}}/48\"},\n{\"title\": \"官场小说\",\"url\":\"api/category/9/{{page}}/48\"},\n{\"title\": \"其他小说\",\"url\":\"api/category/8/{{page}}/48\"}]",
+  "enabled": true,
+  "enabledExplore": true,
+  "weight": 0,
+  "customOrder": 1,
+  "lastUpdateTime": 1641127328432,
+  "ruleSearch": {
+    "bookList": "@json:data.books",
+    "name": "@json:name",
+    "author": "@json:author",
+    "kind": "@json:Category.name",
+    "lastChapter": "@json:Chapters[0].name",
+    "intro": "@json:intro",
+    "coverUrl": "@json:thumb",
+    "bookUrl": "/api/book/{{$.id}}"
+  },
+  "ruleExplore": {
+    "bookList": "@json:data.books",
+    "name": "@json:name",
+    "author": "@json:author",
+    "kind": "@json:Category.name",
+    "lastChapter": "@json:Chapters[0].name",
+    "intro": "@json:intro",
+    "coverUrl": "@json:thumb",
+    "bookUrl": "/api/book/{{$.id}}"
+  },
+  "ruleBookInfo": {
+    "init": "@json:data.book",
+    "name": "@json:name",
+    "author": "@json:author",
+    "kind": "@json:Category.name",
+    "lastChapter": "@json:Chapters[0].name",
+    "intro": "@json:intro",
+    "coverUrl": "@json:thumb"
+  },
+  "ruleToc": {
+    "chapterList": "@json:data.chapters",
+    "chapterName": "@json:name",
+    "chapterUrl": "/api/read/{{$.book_id}}/{{$.id}}"
+  },
+  "ruleContent": {
+    "content": "@json:data.chapter.content"
+  }
+}
